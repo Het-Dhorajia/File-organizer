@@ -2,7 +2,7 @@ import os
 
 folder_path = input("Enter folder path: ")
 
-if not os.path.exists(folder_path):
+if not os.path.isdir(folder_path):
     print("Invalid folder path")
     exit()
 
@@ -43,7 +43,7 @@ for file in files:
     if not found:
         stats["Others"] += 1
 
-print("\nFile Statistics:\n")
+print("\nFILE STATISTICS\n")
 
 for category, count in stats.items():
-    print(category, ":", count)
+    print(f"{category}: {count}")
